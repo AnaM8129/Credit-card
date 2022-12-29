@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Credit Card</title>
+</head>
+<body>
+    <main class="main__container">
+        <section class="main__container__background">
+         <div class="card">
+          <img id="card__logo" src="./images/card-logo.svg" alt="logo">
+           <p id="card__number">0000 0000 0000 0000</p>
+           <div class="card__information">
+            <p id="card__information-name">Jane Appleseed</p>
+            <p><span class="card__date" id="card__month">00</span>/<span class="card__date" id="card__year">00</span></p>
+           </div>
+        </div>
+
+        <div class="card2">
+            <div class="black">
+             .
+            </div>
+            <div class="gray">
+              <p id="card__cvc">000</p>
+            </div>
+            <div class="lineas">
+                <p> _____ _ _______<br>
+                    _ _______ _ ___
+                </p>
+            </div>
+        </div>
+
+      </section>
+      <section class="main__container-form">
+        <form id="form" class="form">
+            <label class="form__label" for="cardholder">Cardholder Name</label>
+            <input required ="" placeholder="e.g. Jane Appleseed" type="text" name="cardholder" class="form__input" id="cardholder">
+            <div id="errorName" class="error"></div>
+
+            <label class="form__label"  for="cardNumber">Card Number</label>
+            <input placeholder="e.g. 1234 5678 9123 0000" type="text" name="cardNumber" class="form__input" id="cardNumber" maxlength="19">
+            <div id="error" class="error"></div>
+
+            <div class="form__date-container">
+
+                <label class="form__label"  for="input__month input__year">Exo. Date (MM/YY)</label>
+        
+                <label class="form__label"  id="cvc" for="input__cvc">CVC</label>
+        
+                <div class="form__date2">
+                    <input placeholder="MM" type="text" class="form__input" maxlength="2" name="cardMonth" id="input__month">
+                    
+                    <input placeholder="YY" type="text"class="form__input" maxlength="2" name="cardYear" id="input__year">
+                    
+                    <input class="form__input" type="text" maxlength="3" name="cardCvc" placeholder="e.g. 123" id="input__cvc">
+                    
+                </div> 
+
+                <div class="errores-container">
+                    <div id="errorMonth" class="error"></div>
+                    <div id="errorYear" class="error"></div>
+                    <div id="errorCvc" class="error"></div>
+                </div>
+
+            </div>
+            <!-- <input id="form__submit" type="submit" value="Confirm" class="buttom" > -->
+            <input id="form__submit" type="submit" class="buttom" value="Confirm">
+        </form>
+
+      </section>
+      <section id="thanks" class="section__thanks hidden">
+        <img id="section__thanks-img" src="./images/icon-complete.svg" alt="thanks">
+        <h1 id="section__thanks-title">Thank you!</h1>
+        <p id="section__thanks-text">We've added your card details.</p>
+        <input id="form__continue" type="submit" value="Continue" class="buttom">
+   </section>
+    </main>
+
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+</html>
